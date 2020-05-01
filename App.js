@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Alert, Button } from 'react-native';
+import { StyleSheet, Text, Image, View, TouchableOpacity, Alert, Button } from 'react-native';
 import { MaterialCommunityIcons as Icon } from 'react-native-vector-icons';
 
 export default class App extends React.Component {
@@ -95,10 +95,10 @@ export default class App extends React.Component {
     // Check winners
     let winner = this.getWinner();
     if (winner == 1) {
-      Alert.alert("Player 1 is the winner");
+      Alert.alert("Ganador: Jugador 1");
       this.initializeGame();
     } else if (winner == -1) {
-      Alert.alert("Player 2 is the winner")
+      Alert.alert("Ganador: Jugador 2")
       this.initializeGame();
     }
   }
@@ -117,7 +117,12 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-
+        <Image source={require('./img/logo.png')} style={{ width: 110, height: 110, alignSelf: "flex-start", margin: 10 }} />
+        <View>
+          <Text style={{ color: "#c2cbd2", textAlign: "center", margin: 10, marginBottom: 20 }}>
+            Piensa en un reto, juega "tic tac toe" y el que pierda tendrá que cumplir el reto
+            </Text>
+        </View>
         <View style={{ flexDirection: "row" }}>
           <TouchableOpacity onPress={() => this.onTilePress(0, 0)} style={[styles.tile, { borderLeftWidth: 0, borderTopWidth: 0 }]}>
             {this.renderIcon(0, 0)}
@@ -154,7 +159,7 @@ export default class App extends React.Component {
           </TouchableOpacity>
         </View>
         <View style={{ paddingTop: 50 }}>
-          <Button title="new Game" onPress={this.onNewGamePress} />
+          <Button title="Reiniciar" onPress={this.onNewGamePress} />
         </View>
       </View>
     );
@@ -164,13 +169,14 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#040c17',
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   tile: {
-    borderWidth: 7,
+    borderWidth: 4,
+    borderColor: '#c2cbd2',
     width: 100,
     height: 100,
     alignItems: 'center',
@@ -178,12 +184,12 @@ const styles = StyleSheet.create({
   },
 
   tileX: {
-    color: "red",
-    fontSize: 60,
+    color: "#6e2bf4",
+    fontSize: 70,
   },
 
   tileO: {
-    color: "green",
+    color: "#ff00ff",
     fontSize: 60,
 
   }
