@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, Image, View, TouchableOpacity, Alert, Button } from 'react-native';
+import { StyleSheet, Text, Image, View, TouchableOpacity, Alert } from 'react-native';
 import { MaterialCommunityIcons as Icon } from 'react-native-vector-icons';
+
 
 export default class App extends React.Component {
 
@@ -158,8 +159,11 @@ export default class App extends React.Component {
             {this.renderIcon(2, 2)}
           </TouchableOpacity>
         </View>
-        <View style={{ paddingTop: 50 }}>
-          <Button title="Reiniciar" onPress={this.onNewGamePress} />
+
+        <View style={{ paddingTop: 20 }}>
+          <TouchableOpacity onPress={this.onNewGamePress} >
+            <Icon name="restore" style={styles.tileO} />
+          </TouchableOpacity>
         </View>
       </View>
     );
