@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Tic-Tac-Reto",
-    "slug": "Tic-Tac-Reto",
+    "name": "tictactoe",
+    "slug": "tictactoe",
     "platforms": [
       "ios",
       "android",

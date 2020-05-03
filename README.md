@@ -2,7 +2,7 @@
 ![Logo](./img/minilogo.png)
 
 
-## Tic tac Reto!
+## Tic Tac Reto!
 Aplicación móvil de juego "Tic tac toe" o también llamado "Gato", donde se juega en parejas en un mismo móvil. Opcionalmente se propone que los jugadores piensen en un reto, para que al jugar el perdedor lo tenga que cumplir.
 
 ## Link
