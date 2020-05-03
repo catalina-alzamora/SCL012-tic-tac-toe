@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tictactoe",
-    "slug": "tictactoe",
+    "name": "Tic Tac Reto",
+    "slug": "Tic Tac Reto",
     "platforms": [
       "ios",
       "android",
@@ -23,6 +23,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "App móvil de Juego Tic tac toe",
+    "githubUrl": "https://github.com/catalina-alzamora/SCL012-tic-tac-toe"
   }
 }
